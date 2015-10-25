@@ -33,7 +33,7 @@ public:
                     if(world->componentsUsed[i][indexChar]) // If entity owns a char
                         map[refPosition[i].y + pos.y][refPosition[i].x + pos.x] = refChars[i];
 
-        // For children : terminal recursion is the best way
+        // For children : recursion is the best way
         for(auto i = 0; i < world->numberEntities; ++i)
             if(world->used[i])
                 for(auto &child : world->children[i])
