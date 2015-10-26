@@ -1,4 +1,4 @@
 # Introduction
 ## An Entity Component System
-## Exemple
+## Example
 See main.cpp for a stupid but simple example
