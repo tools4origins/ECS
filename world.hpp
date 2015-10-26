@@ -29,7 +29,7 @@ public:
 
     std::vector<std::vector<bool>> componentsUsed;
     std::vector<bool> used;
-    std::vector<std::vector<std::shared_ptr<World>>> children;
+    std::vector<std::shared_ptr<World>> children;
     std::size_t numberEntities = 0;
 private:
     std::unordered_map<std::type_index, std::size_t> mIndexComponents;

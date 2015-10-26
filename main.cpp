@@ -35,9 +35,8 @@ public:
 
         // For children : recursion is the best way
         for(auto i = 0; i < world->numberEntities; ++i)
-            if(world->used[i])
-                for(auto &child : world->children[i])
-                    run(child, pos + refPosition[i]);
+            if(world->used[i] && !world->children[i]->used.empty())
+                run(world->children[i], pos + refPosition[i]);
     }
 };
 

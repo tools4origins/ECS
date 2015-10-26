@@ -4,7 +4,7 @@ std::size_t World::getFreeIndex() {
    auto it = std::find(used.begin(), used.end(), false);
    ++numberEntities;
    if(it == used.end()) {
-       children.emplace_back(std::vector<std::shared_ptr<World>>());
+       children.emplace_back(std::make_shared<World>());
        componentsUsed.emplace_back(std::vector<bool>(mIndexComponents.size(), false));
        used.emplace_back(true);
 
